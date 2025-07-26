@@ -21,14 +21,14 @@ function numbery(x) {
     if (r=='') {
         t= document.getElementById("oled-1").innerHTML;
         if (x=='.'&&t=='') {
-            document.getElementById("oled-1").innerHTML= t;
+            window.alert('Bạn đã nhập sai cú pháp');
         } else {
             document.getElementById("oled-1").innerHTML= t+x;
         }
     } else {
         t= document.getElementById("oled-3").innerHTML;
         if (x=='.'&&t=='') {
-            document.getElementById("oled-3").innerHTML= t;
+            window.alert('Bạn đã nhập sai cú pháp');
         } else {
             document.getElementById("oled-3").innerHTML= t+x;
         }
@@ -38,8 +38,7 @@ function result() {
     x= document.getElementById("oled-1").innerHTML;
     y= document.getElementById("oled-2").innerHTML;
     z= document.getElementById("oled-3").innerHTML;
-    a= x*1;
-    b= z*1;
+    a= x*1; b= z*1;
     if (y=='+') {
         return a+b;
     } else if (y=='-') {
@@ -61,6 +60,8 @@ function mathr(w) {
         document.getElementById("oled-3").innerHTML= '';
     } else if (x!='') {
         document.getElementById("oled-2").innerHTML= w;
+    } else {
+        window.alert('Bạn chưa nhập đủ các trường trên');
     }
 }
 document.getElementById('b=').onclick= ()=> {
@@ -68,7 +69,11 @@ document.getElementById('b=').onclick= ()=> {
     y= document.getElementById("oled-2").innerHTML;
     z= document.getElementById("oled-3").innerHTML;
     if (x!=''&&y!=''&&z!='') {
-        r= result();
+        r= result(); a= x*1; b= z*1;
+        document.getElementById("oled-1").innerHTML= a;
+        document.getElementById("oled-3").innerHTML= b;
         document.querySelector("#result > p").innerHTML= r;
+    } else {
+        window.alert('Bạn chưa nhập đủ các trường trên');
     }
 }
