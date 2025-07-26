@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.full-container {
+    width: 600px;
+    height: 650px;
+    margin: 40px auto;
+}
+.result-text {
+    width: 600px;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 80px 520px;
+    grid-template-rows: 70px;
+}
+#result-name > p {
+    font-size: 25px;
+    margin-left: 5px;
+    margin-top: 20px;
+}
+#result {
+    border: 3px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(203, 203, 203);
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+#result > p {
+    font-size: 25px;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+.calculator {
+    margin-top: 30px;
+    width: 600px;
+    height: 550px;
+    border: 3px solid rgb(0, 255, 245);
+    border-radius: 10px;
+    box-shadow: 1px 1px 100px 0.5px rgb(172, 172, 172);
+}
+.oled {
+    width: 600px;
+    height: 255px;
+    border-bottom: 3px solid rgb(36, 193, 36);
+}
+.oled > div {
+    width: 560px;
+    height: 235px;
+    margin: 20px 0 0 20px;
+    display: grid;
+    grid-template-columns: 560px;
+    grid-template-rows: 65px 65px 65px;
+    row-gap: 20px;
+}
+#oled-1,#oled-3 {
+    border: 3px solid red;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background-color: rgb(203, 203, 203);
+    color: black;
+    font-size: 30px;
+    padding-top: 5px;
+    padding-left: 5px;
+    box-shadow: 1px 1px 100px 0.5px rgb(172, 172, 172);
+}
+#oled-2 {
+    width: 65px;
+    border: 3px solid;
+    border-color: blue;
+    border-top-color: red;
+    border-bottom-color: red;
+    background-color: rgb(203, 203, 203);
+    font-size: 40px;
+    box-shadow: 1px 1px 100px 0.5px rgb(172, 172, 172);
+}
+.keyboard {
+    width: 600px;
+    height: 273px;
+    display: grid;
+    grid-template-columns: 450px 150px;
+    grid-template-rows: 273px;
+}
+.keyboard-math {
+    border-left: 3px solid blue;
+}
+.keyboard-math > div {
+    width: 110px;
+    height: 253px;
+    margin: 10px 0 0 20px;
+    display: grid;
+    grid-template-columns: 110px;
+    grid-template-rows: 55px 55px 55px 55px;
+    row-gap: 11px;
+}
+.keyboard-math > div > button,.keyboard-number > div > button {
+    border: 3px solid rgb(110, 110, 255);
+    font-size: 25px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 100px 0.5px rgb(172, 172, 172);
+}
+.keyboard-math > div > button:hover,.keyboard-number > div > button:hover {
+    background-color: white;
+}
+.keyboard-number > div {
+    width: 430px;
+    height: 253px;
+    margin: 10px 0 0 10px;
+    display: grid;
+    grid-template-columns: 120px 120px 120px;
+    grid-template-rows: 55px 55px 55px 55px;
+    column-gap: 35px;
+    row-gap: 11px;
+}
+.reset {
+    position: absolute;
+    font-size: 20px;
+    width: 70px;
+    height: 65px;
+    border: 3px dotted orange;
+    border-radius: 5px;
+    color: rgb(188, 39, 39);
+    margin: 208px 0 0 120px;
+    background-color: rgb(200, 200, 200);
+    box-shadow: 1px 1px 100px 0.5px rgb(172, 172, 172);
+}
+.reset:hover {
+    background-color: rgb(219, 219, 219);
+}

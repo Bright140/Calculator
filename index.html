@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="full-container">
+        <button class="reset" onclick= "reset()">Reset</button>
+        <div class="result-text">
+            <div id="result-name">
+                <p>Result:</p>
+            </div>
+            <div id="result">
+                <p></p>
+            </div>
+        </div>
+        <div class="calculator">
+            <div class="oled">
+                <div>
+                    <div id="oled-1"></div>
+                    <button id="oled-2"></button>
+                    <div id="oled-3"></div>
+                </div>
+            </div>
+            <div class="keyboard">
+                <div class="keyboard-number">
+                    <div>
+                        <button id="b-7" onpointerdown="changest('b-7')" onpointerup="changesr('b-7')" onclick="numbery('7')">7</button>
+                        <button id="b-8" onpointerdown="changest('b-8')" onpointerup="changesr('b-8')" onclick="numbery('8')">8</button>
+                        <button id="b-9" onpointerdown="changest('b-9')" onpointerup="changesr('b-9')" onclick="numbery('9')">9</button>
+                        <button id="b-4" onpointerdown="changest('b-4')" onpointerup="changesr('b-4')" onclick="numbery('4')">4</button>
+                        <button id="b-5" onpointerdown="changest('b-5')" onpointerup="changesr('b-5')" onclick="numbery('5')">5</button>
+                        <button id="b-6" onpointerdown="changest('b-6')" onpointerup="changesr('b-6')" onclick="numbery('6')">6</button>
+                        <button id="b-1" onpointerdown="changest('b-1')" onpointerup="changesr('b-1')" onclick="numbery('1')">1</button>
+                        <button id="b-2" onpointerdown="changest('b-2')" onpointerup="changesr('b-2')" onclick="numbery('2')">2</button>
+                        <button id="b-3" onpointerdown="changest('b-3')" onpointerup="changesr('b-3')" onclick="numbery('3')">3</button>
+                        <button id="b-0" onpointerdown="changest('b-0')" onpointerup="changesr('b-0')" onclick="numbery('0')">0</button>
+                        <button id="b." onpointerdown="changest('b.')" onpointerup="changesr('b.')" onclick="numbery('.')">.</button>
+                        <button id="b=" onpointerdown="changest('b=')" onpointerup="changesr('b=')">=</button>
+                    </div>
+                </div>
+                <div class="keyboard-math">
+                    <div>
+                        <button id="m+" onpointerdown="changest('m+')" onpointerup="changesr('m+')" onclick="mathr('+')">+</button>
+                        <button id="m-" onpointerdown="changest('m-')" onpointerup="changesr('m-')" onclick="mathr('-')">-</button>
+                        <button id="mx" onpointerdown="changest('mx')" onpointerup="changesr('mx')" onclick="mathr('x')">x</button>
+                        <button id="m/" onpointerdown="changest('m/')" onpointerup="changesr('m/')" onclick="mathr('/')">/</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="logic.js" defer></script>
+</body>
+</html>
